@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: rgb(164, 102, 223);
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra já a sua nacionalidade</h1>
+    Informe o país do seu nascimento: <input type="text" name="país" id="paístxt">
+    <input type="button" value="Validar" onclick="nacionalidade()">
+    <div id="result">
+        </div>
+    <script>
+        function nacionalidade(){
+            var país = window.document.getElementById('paístxt').value;
+            var result = window.document.getElementById('result');
+            result.innerText = `A sua nacionalidade é`;
+            if(país == 'Brasil'){
+                result.innerText += ` BRASILEIRO!`;
+            } else {
+                result.innerText += ` INTERNACIONAL!`;
+            }
+        }
+    </script>
+</body>
+</html>

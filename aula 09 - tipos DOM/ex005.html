@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(73, 73, 226);
+            color: white;
+            font: normal 16pt Arial;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1 id = "h1">Iniciando estudos com DOM</h1>
+    <p class = "p0">Aqui vai o resultado</p>
+    <p id = "p1">Aprendendo a utilizar o <strong>DOM</strong> em JavaScript</p>
+    <div name="div">Clique em mim</div>
+    <script>
+        //Utilizando o DOM para selecionar e alterar elementos do body
+
+        var p1 = window.document.getElementsByTagName('p')[1] //MARCA (TAG)
+        p1.style.backgroundColor = 'red'
+
+        var p0 = window.document.getElementsByClassName('p0')[0] //CLASSE
+        p0.style.color = 'red'
+
+        var h1 = window.document.getElementById('h1') //ID
+        h1.style.backgroundColor = "black"
+        h1.style.color = "yellow"
+
+        var div = window.document.getElementsByName('div')[0] //NAME
+        div.style.color = "red"
+
+        window.document.querySelector('p1#p1') //SELECTOR
+        p1.style.color = "yellow"
+
+
+    </script>
+</body>
+</html>
